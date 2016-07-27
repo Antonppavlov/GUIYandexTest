@@ -17,9 +17,6 @@ import java.util.logging.Logger;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.url;
 
-/**
- * Created by Антон on 25.07.2016.
- */
 @Ignore
 @Features("Yandex Market")
 @Stories("Мобильные устройства")

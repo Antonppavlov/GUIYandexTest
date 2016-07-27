@@ -6,9 +6,7 @@ import ru.yandex.qatools.allure.annotations.Step;
 import static com.codeborne.selenide.Condition.not;
 import static com.codeborne.selenide.Condition.selected;
 
-/**
- * Created by ap_pavlov on 29.04.2016.
- */
+
 public abstract class AbstractCheckBox {
 
     private SelenideElement checkBox;

@@ -5,9 +5,7 @@ import ru.yandex.qatools.allure.annotations.Step;
 
 import static com.codeborne.selenide.Condition.*;
 
-/**
- * Created by ap_pavlov on 25.04.2016.
- */
+
 public abstract class AbstractElements {
 
     public final SelenideElement element;

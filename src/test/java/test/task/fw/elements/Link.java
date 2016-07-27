@@ -3,9 +3,7 @@ package test.task.fw.elements;
 import com.codeborne.selenide.SelenideElement;
 import test.task.fw.elements.abstractionlayer.text.AbstractActiveTextElement;
 
-/**
- * Created by ap_pavlov on 25.04.2016.
- */
+
 public class Link extends AbstractActiveTextElement {
 
     public Link(SelenideElement element, String nameElement) {

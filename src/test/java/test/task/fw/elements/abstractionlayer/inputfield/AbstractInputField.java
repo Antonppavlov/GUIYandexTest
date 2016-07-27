@@ -4,9 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import ru.yandex.qatools.allure.annotations.Step;
 import test.task.fw.elements.abstractionlayer.active.AbstractActiveElement;
 
-/**
- * Created by ap_pavlov on 25.04.2016.
- */
+
 public abstract class AbstractInputField extends AbstractActiveElement {
     protected AbstractInputField(SelenideElement element, String nameElement) {
         super(element, nameElement);

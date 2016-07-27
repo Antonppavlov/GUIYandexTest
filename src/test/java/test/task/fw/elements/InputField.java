@@ -3,9 +3,7 @@ package test.task.fw.elements;
 import com.codeborne.selenide.SelenideElement;
 import test.task.fw.elements.abstractionlayer.inputfield.AbstractInputField;
 
-/**
- * Created by ap_pavlov on 25.04.2016.
- */
+
 public class InputField extends AbstractInputField {
 
     public InputField(SelenideElement element, String nameElement) {

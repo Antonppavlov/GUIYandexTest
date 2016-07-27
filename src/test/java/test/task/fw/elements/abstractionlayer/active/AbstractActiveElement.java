@@ -5,9 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import ru.yandex.qatools.allure.annotations.Step;
 import test.task.fw.elements.abstractionlayer.AbstractElements;
 
-/**
- * Created by ap_pavlov on 25.04.2016.
- */
+
 public abstract class AbstractActiveElement extends AbstractElements {
 
     protected AbstractActiveElement(SelenideElement element, String nameElement) {

@@ -3,9 +3,6 @@ package test.task.fw.elements;
 import com.codeborne.selenide.SelenideElement;
 import test.task.fw.elements.abstractionlayer.AbstractCheckBox;
 
-/**
- * Created by ap_pavlov on 29.04.2016.
- */
 public class CheckBox extends AbstractCheckBox {
 
     public CheckBox(SelenideElement checkBox, SelenideElement labelCheckbox, String nameCheckBox) {
@@ -22,7 +19,6 @@ public class CheckBox extends AbstractCheckBox {
 
     public void checkSelect() {
         super.checkSelect(nameCheckBox);
-
     }
 
     public void checkNotSelect() {
