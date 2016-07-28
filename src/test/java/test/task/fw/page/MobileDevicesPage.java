@@ -4,7 +4,8 @@ import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import ru.yandex.qatools.allure.annotations.Step;
-import test.task.fw.elements.Link;
+import test.task.fw.element.Link;
+
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
@@ -15,7 +16,7 @@ public class MobileDevicesPage {
 
     public MobileDevicesPage() {
         SelenideElement parent = $(".searchParams");
-        this.advancedSearch = new Link(parent.$(".black"), "Расширенный поиск");
+        this.advancedSearch = new Link(parent.$(".black"));
     }
 
     @Step("Проверяю что в категории {0}, {1} девайса")

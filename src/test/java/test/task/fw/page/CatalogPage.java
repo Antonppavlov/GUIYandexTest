@@ -3,7 +3,8 @@ package test.task.fw.page;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import ru.yandex.qatools.allure.annotations.Step;
-import test.task.fw.elements.Link;
+import test.task.fw.element.Link;
+
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
@@ -15,7 +16,7 @@ public class CatalogPage {
 
     public CatalogPage() {
         SelenideElement parent = $(".tabs-panes.box.i-bem");
-        this.electronics = new Link(parent.$$(".title.title_size_18").find(text("Электроника")), "Электроника");
+        this.electronics = new Link(parent.$$(".title.title_size_18").find(text("Электроника")));
     }
 
     public void checkCatalogs() {

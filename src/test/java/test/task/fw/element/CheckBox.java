@@ -1,12 +1,17 @@
-package test.task.fw.elements;
+package test.task.fw.element;
 
-import com.codeborne.selenide.SelenideElement;
-import test.task.fw.elements.abstractionlayer.AbstractCheckBox;
+
+import test.task.fw.element.abstacts.AbstractCheckBox;
 
 public class CheckBox extends AbstractCheckBox {
 
-    public CheckBox(SelenideElement checkBox, SelenideElement labelCheckbox, String nameCheckBox) {
-        super(checkBox, labelCheckbox, nameCheckBox);
+
+    public CheckBox(Box box, Text labelCheckbox, String nameCheckBox) {
+        super(box, labelCheckbox, nameCheckBox);
+    }
+
+    public CheckBox(Box box, Text labelCheckbox) {
+        super(box, labelCheckbox);
     }
 
     public void selectCheckBox() {
