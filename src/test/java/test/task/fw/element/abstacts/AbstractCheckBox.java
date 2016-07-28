@@ -52,5 +52,11 @@ public abstract class AbstractCheckBox {
         box.getSelenideElement().shouldHave(not(selected));
     }
 
+    public Box getBox() {
+        return box;
+    }
 
+    public Text getLabelCheckbox() {
+        return labelCheckbox;
+    }
 }
