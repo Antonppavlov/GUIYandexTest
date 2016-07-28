@@ -44,9 +44,13 @@ public abstract class AbstractElements {
     }
 
 
+
     @Step("Возврашаю boolean доступен ли элемент")
     public boolean isDisplayed() {
         return element.isDisplayed();
     }
 
+    public SelenideElement getSelenideElement() {
+        return element;
+    }
 }
