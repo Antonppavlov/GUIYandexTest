@@ -21,10 +21,6 @@ public abstract class AbstractCheckBox {
         this.nameCheckBox = nameCheckBox;
     }
 
-    protected AbstractCheckBox(Box box, Text labelCheckbox) {
-        this(box, labelCheckbox, labelCheckbox.getText());
-    }
-
 
     @Step("Отмечаю чек-бокс: {0}")
     protected void selectCheckBox(String nameCheckBox) {

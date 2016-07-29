@@ -11,7 +11,7 @@ public class CheckBox extends AbstractCheckBox {
     }
 
     public CheckBox(Box box, Text labelCheckbox) {
-        super(box, labelCheckbox);
+        this(box, labelCheckbox,labelCheckbox.getText());
     }
 
     public void selectCheckBox() {

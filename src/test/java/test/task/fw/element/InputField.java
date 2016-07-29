@@ -10,6 +10,6 @@ public class InputField extends TypifiedElement {
         super(selenideElement, "поле ввода: '" + nameElement + "'");
     }
     public InputField(SelenideElement selenideElement) {
-        super(selenideElement, selenideElement.getText());
+        this(selenideElement, selenideElement.getText());
     }
 }
