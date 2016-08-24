@@ -1,20 +1,19 @@
-package test.task.fw.element;
+package test.task.fw.elements.objects;
 
 
 import com.codeborne.selenide.SelenideElement;
-import test.task.fw.element.abstacts.TypifiedElement;
+import test.task.fw.elements.abstacts.AllureElement;
 
 
-public class Image extends TypifiedElement {
+public class Image extends AllureElement {
 
     public Image(SelenideElement selenideElement, String nameElement) {
-        super(selenideElement, "картинка(у): '" + nameElement + "'");
+        super(selenideElement, "картина(у): '" + nameElement + "'");
     }
 
     public Image(SelenideElement selenideElement) {
-        this(selenideElement, selenideElement.getText());
+        super(selenideElement);
     }
-
 
     public String getSource() {
         return getSelenideElement().getAttribute("src");

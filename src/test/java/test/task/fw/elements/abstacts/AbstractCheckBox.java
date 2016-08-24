@@ -1,12 +1,12 @@
-package test.task.fw.element.abstacts;
+package test.task.fw.elements.abstacts;
+
 
 import ru.yandex.qatools.allure.annotations.Step;
-import test.task.fw.element.Box;
-import test.task.fw.element.Text;
+import test.task.fw.elements.objects.Box;
+import test.task.fw.elements.objects.Text;
 
 import static com.codeborne.selenide.Condition.not;
 import static com.codeborne.selenide.Condition.selected;
-
 
 public abstract class AbstractCheckBox {
 
@@ -15,7 +15,7 @@ public abstract class AbstractCheckBox {
     protected String nameCheckBox;
 
 
-    protected AbstractCheckBox(Box box, Text labelCheckbox, String nameCheckBox) {
+    public AbstractCheckBox(Box box, Text labelCheckbox, String nameCheckBox) {
         this.box = box;
         this.labelCheckbox = labelCheckbox;
         this.nameCheckBox = nameCheckBox;
@@ -23,7 +23,7 @@ public abstract class AbstractCheckBox {
 
 
     @Step("Отмечаю чек-бокс: {0}")
-    protected void selectCheckBox(String nameCheckBox) {
+    public void selectCheckBox(String nameCheckBox) {
         if (!box.isSelected()) {
             labelCheckbox.click();
         }
@@ -31,7 +31,7 @@ public abstract class AbstractCheckBox {
     }
 
     @Step("Убираю отметку с чек-бокса: {0}")
-    protected void deselectCheckBox(String nameCheckBox) {
+    public void deselectCheckBox(String nameCheckBox) {
         if (box.isSelected()) {
             labelCheckbox.click();
         }
@@ -39,12 +39,12 @@ public abstract class AbstractCheckBox {
     }
 
     @Step("Проверяю что чек-бокс: {0} отмечен")
-    protected void checkSelect(String nameCheckBox) {
+    public void checkSelect(String nameCheckBox) {
         box.getSelenideElement().shouldHave(selected);
     }
 
     @Step("Проверяю что чек-бокс: {0} не отмечен")
-    protected void checkNotSelect(String nameCheckBox) {
+    public void checkNotSelect(String nameCheckBox) {
         box.getSelenideElement().shouldHave(not(selected));
     }
 
@@ -52,7 +52,7 @@ public abstract class AbstractCheckBox {
         return box;
     }
 
-    public Text getLabelCheckbox() {
+    public Text getLabel() {
         return labelCheckbox;
     }
 }

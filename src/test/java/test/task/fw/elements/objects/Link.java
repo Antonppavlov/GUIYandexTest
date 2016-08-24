@@ -1,18 +1,18 @@
-package test.task.fw.element;
+package test.task.fw.elements.objects;
 
 
 import com.codeborne.selenide.SelenideElement;
-import test.task.fw.element.abstacts.TypifiedElement;
+import test.task.fw.elements.abstacts.AllureElement;
 
 
-public class Link extends TypifiedElement {
+public class Link extends AllureElement {
 
     public Link(SelenideElement selenideElement, String nameElement) {
-        super(selenideElement, "ссылка(у): '" + nameElement + "'");
+        super(selenideElement, "ссылку: '" + nameElement + "'");
     }
 
     public Link(SelenideElement selenideElement) {
-        this(selenideElement, selenideElement.getText());
+        super(selenideElement);
     }
 
     public String getReference() {

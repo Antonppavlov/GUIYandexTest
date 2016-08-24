@@ -1,5 +1,6 @@
 package test.task.test;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.junit.Test;
@@ -41,9 +42,9 @@ public class Version2YandexTest extends MyAttachment {
         SearchMobileDevicePage searchMobileDevicePage = new SearchMobileDevicePage();
         FilterPanel filterPanel = searchMobileDevicePage.getFilterPanel();
         filterPanel.getInputFieldFrom().sendKeys("5125");
-        filterPanel.getInputFieldFrom().checkAttribute("value","5125");
+        filterPanel.getInputFieldFrom().shouldHave(Condition.attribute("value","5125"));
         filterPanel.getInputFieldUpTo().sendKeys("10123");
-        filterPanel.getInputFieldUpTo().checkAttribute("value","10123");
+        filterPanel.getInputFieldUpTo().shouldHave(Condition.attribute("value","10123"));
         filterPanel.getCheckBoxOnSale().selectCheckBox();
         filterPanel.getCheckBoxAndroid().selectCheckBox();
         ElementsCollection allDeviceList = searchMobileDevicePage.getAllDeviceList();

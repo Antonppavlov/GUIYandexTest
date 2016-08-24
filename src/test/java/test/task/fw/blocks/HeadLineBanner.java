@@ -1,14 +1,15 @@
 package test.task.fw.blocks;
 
 import com.codeborne.selenide.SelenideElement;
-import test.task.fw.element.Link;
+import test.task.fw.elements.abstacts.AllureElement;
+import test.task.fw.elements.objects.Link;
 
 import static com.codeborne.selenide.Selenide.$;
 
 public class HeadLineBanner {
 
-    private final Link linkShowcase;
-    private final Link linkCatalog;
+    private final AllureElement linkShowcase;
+    private final AllureElement linkCatalog;
 
     public HeadLineBanner() {
         SelenideElement parent = $(".headline");
@@ -17,11 +18,11 @@ public class HeadLineBanner {
         this.linkCatalog = new Link(parent.$(".main-tabs__text", 1));
     }
 
-    public Link getLinkShowcase() {
+    public AllureElement getLinkShowcase() {
         return linkShowcase;
     }
 
-    public Link getLinkCatalog() {
+    public AllureElement getLinkCatalog() {
         return linkCatalog;
     }
 

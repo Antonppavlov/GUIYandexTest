@@ -4,15 +4,15 @@ import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import ru.yandex.qatools.allure.annotations.Step;
-import test.task.fw.element.Link;
-
+import test.task.fw.elements.abstacts.AllureElement;
+import test.task.fw.elements.objects.Link;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class MobileDevicesPage {
 
-    private final Link advancedSearch;
+    private final AllureElement advancedSearch;
 
     public MobileDevicesPage() {
         SelenideElement parent = $(".searchParams");
@@ -25,7 +25,7 @@ public class MobileDevicesPage {
     }
 
 
-    public Link getAdvancedSearch() {
+    public AllureElement getAdvancedSearch() {
         return advancedSearch;
     }
 }

@@ -3,18 +3,18 @@ package test.task.fw.page.searchmobiledevice;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import test.task.fw.element.Box;
-import test.task.fw.element.CheckBox;
-import test.task.fw.element.InputField;
-import test.task.fw.element.Text;
-
+import test.task.fw.elements.abstacts.AllureElement;
+import test.task.fw.elements.objects.Box;
+import test.task.fw.elements.objects.CheckBox;
+import test.task.fw.elements.objects.InputField;
+import test.task.fw.elements.objects.Text;
 
 import static com.codeborne.selenide.Selenide.$;
 
 public class FilterPanel {
 
-    private final InputField inputFieldFrom;
-    private final InputField inputFieldUpTo;
+    private final AllureElement inputFieldFrom;
+    private final AllureElement inputFieldUpTo;
     private final CheckBox checkBoxOnSale;
     private final CheckBox checkBoxAndroid;
     private final ElementsCollection collectionCheckBox;
@@ -28,17 +28,17 @@ public class FilterPanel {
         collectionCheckBox = parent.$$(".filter-block_head_none .checkbox__label");
         Text labelOnSale = new Text(collectionCheckBox.find(Condition.text("В продаже")));
         Box checkBoxOnSale = new Box(labelOnSale.getSelenideElement().parent().$("[type='checkbox']"));
-        this.checkBoxOnSale = new CheckBox(checkBoxOnSale, labelOnSale);
+        this.checkBoxOnSale = new CheckBox(checkBoxOnSale,labelOnSale);
         Text labelAndroid = new Text(collectionCheckBox.find(Condition.text("Android")));
         Box checkBoxAndroid = new Box(labelAndroid.getSelenideElement().parent().$("[type='checkbox']"));
         this.checkBoxAndroid = new CheckBox(checkBoxAndroid, labelAndroid);
     }
 
-    public InputField getInputFieldFrom() {
+    public AllureElement getInputFieldFrom() {
         return inputFieldFrom;
     }
 
-    public InputField getInputFieldUpTo() {
+    public AllureElement getInputFieldUpTo() {
         return inputFieldUpTo;
     }
 

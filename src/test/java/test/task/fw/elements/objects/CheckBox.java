@@ -1,7 +1,7 @@
-package test.task.fw.element;
+package test.task.fw.elements.objects;
 
 
-import test.task.fw.element.abstacts.AbstractCheckBox;
+import test.task.fw.elements.abstacts.AbstractCheckBox;
 
 public class CheckBox extends AbstractCheckBox {
 
@@ -11,7 +11,7 @@ public class CheckBox extends AbstractCheckBox {
     }
 
     public CheckBox(Box box, Text labelCheckbox) {
-        this(box, labelCheckbox,labelCheckbox.getText());
+        this(box, labelCheckbox, labelCheckbox.getText());
     }
 
     public void selectCheckBox() {
