@@ -29,12 +29,12 @@ public abstract class MyAttachment {
     }
 
     @Attachment(type = "image/png")
-    public static byte[] screenshot(byte[] dataForScreenshot) {
+    protected static byte[] screenshot(byte[] dataForScreenshot) {
         return dataForScreenshot;
     }
 
     @Attachment(value = "Список девайсов", type = "text/plain")
-    public String addTextToTheReport(List<String> stringList) {
+    protected String addTextToTheReport(List<String> stringList) {
         String information = "";
         for (String string : stringList) {
             information += string + "\n";

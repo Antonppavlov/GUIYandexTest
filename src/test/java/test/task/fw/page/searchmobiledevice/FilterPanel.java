@@ -28,7 +28,7 @@ public class FilterPanel {
         collectionCheckBox = parent.$$(".filter-block_head_none .checkbox__label");
         Text labelOnSale = new Text(collectionCheckBox.find(Condition.text("В продаже")));
         Box checkBoxOnSale = new Box(labelOnSale.getSelenideElement().parent().$("[type='checkbox']"));
-        this.checkBoxOnSale = new CheckBox(checkBoxOnSale,labelOnSale);
+        this.checkBoxOnSale = new CheckBox(checkBoxOnSale, labelOnSale);
         Text labelAndroid = new Text(collectionCheckBox.find(Condition.text("Android")));
         Box checkBoxAndroid = new Box(labelAndroid.getSelenideElement().parent().$("[type='checkbox']"));
         this.checkBoxAndroid = new CheckBox(checkBoxAndroid, labelAndroid);
